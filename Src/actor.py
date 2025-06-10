@@ -5,16 +5,6 @@ import ollama
 
 class Actor:
     def __init__(self, model_name, role_prompt, ollama_client=None, seed=None):
-        """
-        Actorクラスのコンストラクタ (テキストベース, Ollamaクライアント対応)
-
-        Args:
-            model_name (str): 使用するLLMのモデル名 (例: "llama3")
-            role_prompt (str): このアクターの役割を定義するシステムプロンプト
-            ollama_client (ollama.Client, optional):
-                Ollamaと通信するための `ollama.Client` インスタンス。
-            seed (int, optional): 再現性のためのシード値
-        """
         self.model_name = model_name
         self.ollama_client = ollama_client # ollama.Client() のインスタンスを期待
         self.seed = seed

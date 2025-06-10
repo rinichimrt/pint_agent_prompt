@@ -117,51 +117,7 @@ Translated with DeepL.com (free version)
 
 """
 
-    # ここにプロジェクトPDSで必要となる様々なロールを追加できます
-    # 例: "accessibility_expert_wcu": "あなたは手動車椅子を日常的に使用する当事者の視点を持つアクセシビリティ専門家です。..."
 }
-
-
-# --- プロンプトテンプレート ---
-# 対話の各ステップで使用する汎用的なプロンプトテンプレートです。
-# 必要に応じてコメントを解除し、内容を定義してください。
-# PROMPT_TEMPLATES = {
-#     "initial_greeting": "こんにちは。何かお手伝いできることはありますか？",
-#     "ask_for_more_detail": "もう少し詳しく教えていただけますか？",
-#     "summarize_previous": "ここまでの話を要約すると、###PREVIOUS_CONVERSATION### ということですね。次に何をしましょうか？",
-#     "generate_based_on_input": "以下の情報に基づいて、###YOUR_TASK### を実行してください。\n情報: ###INPUT_DATA###",
-# }
-
-
-# --- 特定の対話シナリオ用プロンプト集 ---
-# PDSがユーザー役として発話する内容のリストをシナリオとして定義します。
-# `main.py` から `SCENARIO_PINT_AGENT_TEST` のようにして参照できます。
-
-# SCENARIO_PINT_AGENT_TEST_JA = [
-#     "こんにちは！まずは自己紹介をお願いできますか？ちなみに私の名前は”りん”です",
-#     "素晴らしいですね。次に、あなたが最も得意とすることは何ですか？",
-#     "なるほど。では最後に、何か面白い豆知識を一つ教えてください。",
-#     "ありがとうございました！とても参考になりました。",
-#     "ところで私の名前は？"
-# ]
-# SCENARIO_PINT_AGENT_TEST_EN = [
-#     "Hello! Could you please introduce yourself first? By the way, my name is Rin.",
-#     "That's wonderful. Next, what are you best at?",
-#     "I see. Finally, could you tell me something interesting about yourself?",
-#     "Thank you very much! That was very helpful.",
-#     "By the way, what is my name?"
-# ]
-# SCENARIO_A_PROMPTS = [
-#     "シナリオAを開始します。最初のステップです。",
-#     "シナリオAのステップ2です。###USER_RESPONSE_STEP1### を踏まえて応答してください。",
-#     "シナリオAの最終ステップです。結果をまとめてください。"
-# ]
-# # prompts_and_roles.py (修正後)
-
-# ... (ROLES 辞書の定義はそのまま) ...
-
-# --- 対話シナリオ集 ---
-# PDSがユーザー役として発話する内容のリストを、キーを持つ辞書として定義します。
 DIALOGUE_SCENARIOS = {
     "SCENARIO_PINT_AGENT_TEST_JA": [
         "こんにちは！まずは自己紹介をお願いできますか？ちなみに私の名前は”りん”です",
@@ -183,19 +139,3 @@ DIALOGUE_SCENARIOS = {
         "シナリオAの最終ステップです。結果をまとめてください。"
     ]
 }
-
-
-if __name__ == '__main__':
-    # このファイルを直接実行した際の簡単なテスト（定義内容の表示など）
-    print("--- ロール定義 (ROLES) ---")
-    for role_name, role_description in ROLES.items():
-        print(f"[{role_name}]: {role_description[:70]}...")
-
-    # if 'PROMPT_TEMPLATES' in locals():
-    #     print("\n--- プロンプトテンプレート (PROMPT_TEMPLATES) ---")
-    #     for template_name, template_string in PROMPT_TEMPLATES.items():
-    #         print(f"[{template_name}]: {template_string[:70]}...")
-
-    print("\n--- 対話シナリオ (SCENARIO_PINT_AGENT_TEST) ---")
-    for i, prompt in enumerate(SCENARIO_PINT_AGENT_TEST):
-        print(f"[{i}]: {prompt[:70]}...")
