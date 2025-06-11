@@ -35,9 +35,9 @@ def run_pds_session(ollama_client, model_name, actor_role_key, pds_user_prompts,
         # 日本語用
         #
         #
-        if config.DIALOGUE_SCENARIOS_KEY is "SCENARIO_PINT_AGENT_TEST_JA":
+        if config.DIALOGUE_SCENARIOS_KEY == "SCENARIO_PINT_AGENT_TEST_JA":
             enhanced_user_utterance = f"あなたは「{actor_role_key}」という役割です。次の発言に答えてください：{pds_user_utterance}"
-        elif config.DIALOGUE_SCENARIOS_KEY is "SCENARIO_PINT_AGENT_TEST_EN":
+        elif config.DIALOGUE_SCENARIOS_KEY == "SCENARIO_PINT_AGENT_TEST_EN":
             enhanced_user_utterance = f"Your role is '{actor_role_key}'. Please respond to the following statement: {pds_user_utterance}"
 
 
