@@ -6,8 +6,8 @@
 # --- モデル設定 ---
 # PDSで使用するデフォルトのLLMモデル名。
 # `ollama list` コマンドで利用可能なモデルを確認し、適切なものを設定してください。
-# DEFAULT_MODEL_NAME = "gemma3:latest"  # 例: "llama3", "mistral", "phi3"
-DEFAULT_MODEL_NAME = "gemma3:27b"  # 例: "llama3", "mistral", "phi3"
+DEFAULT_MODEL_NAME = "gemma3:latest"  # 例: "llama3", "mistral", "phi3"
+# DEFAULT_MODEL_NAME = "gemma3:27b"  # 例: "llama3", "mistral", "phi3"
 
 
 # --- デフォルト実行設定 ---
@@ -53,7 +53,7 @@ DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私
 
 
 
-DEFAULT_MAX_TURNS = 30
+DEFAULT_MAX_TURNS = 3
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"
