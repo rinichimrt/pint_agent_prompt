@@ -53,7 +53,7 @@ DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私
 
 
 
-DEFAULT_MAX_TURNS = 3
+DEFAULT_MAX_TURNS = 30
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"
