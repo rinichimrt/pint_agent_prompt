@@ -6,7 +6,7 @@
 # --- モデル設定 ---
 # PDSで使用するデフォルトのLLMモデル名。
 # `ollama list` コマンドで利用可能なモデルを確認し、適切なものを設定してください。
-# DEFAULT_MODEL_NAME = "gemma3:latest"  # 例: "llama3", "mistral", "phi3"
+#DEFAULT_MODEL_NAME = "gemma3:latest"  # 例: "llama3", "mistral", "phi3"
 DEFAULT_MODEL_NAME = "gemma3:27b"  # 例: "llama3", "mistral", "phi3"
 
 
