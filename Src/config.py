@@ -39,7 +39,7 @@ DEFAULT_SEED = 459
 # SAVE_HISTORY_DIR = "pds_history_logs"
 # HISTORY_FILENAME_PREFIX = "pds_dialogue"
 
-
+#iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 # --- (オプション) その他のPDS設定 ---
 # 必要に応じて、プロジェクト固有の設定項目を追加できます。
 # 例: DEFAULT_USER_ROLE_KEY = "dialogue_partner_neutral"
