@@ -14,6 +14,11 @@ class Actor:
         current_user_message = {'role': 'user', 'content': user_prompt}
         self.messages.append(current_user_message)
 
+
+        self.print_input_prompt(user_prompt)
+
+
+
         options_payload = {}
         if self.seed is not None:
             options_payload['seed'] = self.seed
@@ -41,3 +46,7 @@ class Actor:
         except Exception as e:
             print(f"エラー: LLMとの通信中に予期せぬ問題が発生しました - {e}")
             return None
+
+
+    def print_input_prompt(self, input_prompt):
+        print(f"入力されたprompt：{input_prompt}")

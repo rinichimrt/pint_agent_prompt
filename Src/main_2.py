@@ -83,8 +83,7 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
         merged_conversation_history.append({'role': 'user', 'content': user_response})
 
         print("--------------------------")
-
-    print("\n--- PDSセッション終了 ---")
+        print("\n--- PDSセッション終了 ---")
     print("最終的な対話履歴 (マージ済み):")
     for message_idx, message in enumerate(merged_conversation_history):
         print(f"  [{message_idx}] {message['role']}: {str(message['content'])[:120]}...")
@@ -99,10 +98,11 @@ if __name__ == '__main__':
 
     # 2つのアクターのロールをconfigから、または直接指定
     AGENT_ACTOR_ROLE_KEY = config.DEFAULT_TARGET_ACTOR_ROLE_KEY
-    USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral" # 例として「中立な対話パートナー」を設定
+    USER_ACTOR_ROLE_KEY = config.DEFAULT_USER_ACTOR_ROLE_KEY
 
     # 対話を開始するための最初の発話
-    INITIAL_PROMPT = "こんにちは。あなたの役割について、私に理解できるように説明してください。"
+    INITIAL_PROMPT = config.DEFAULT_INITIAL_PROMPT
+
 
     # 対話の往復回数を指定
     MAX_TURNS = 3
