@@ -25,6 +25,8 @@ DEFAULT_TARGET_ACTOR_ROLE_KEY = "pint_agent_1"
 # DEFAULT_TARGET_ACTOR_ROLE_KEY = "pint_agent_boss_with_feedback"
 
 # デフォルトの対話シナリオのキー
+#
+#------------------------------------------------------------------------20250611現在使っていない
 DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_JA"
 # DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_EN"
 # DIALOGUE_SCENARIOS_KEY = "SCENARIO_BOSS_PERSUASION_JA"
