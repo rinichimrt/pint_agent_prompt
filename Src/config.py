@@ -42,8 +42,8 @@ ENHANCED_USER_UTTERANCE_KEY = "JA"
 
 
 
-# DEFAULT_USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral"
-DEFAULT_USER_ACTOR_ROLE_KEY = "fany_user"
+DEFAULT_USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral"
+# DEFAULT_USER_ACTOR_ROLE_KEY = "fany_user"
 
 
 
