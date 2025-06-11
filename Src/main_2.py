@@ -104,7 +104,7 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
     return merged_conversation_history
 
 
-
+# 毎回の生成前に自分（返答するLLM）の役割をリマインドさせるための処理
 def set_reminder(response, actor_role_key):
     if config.ENHANCED_USER_UTTERANCE_KEY == "JA":
         print(actor_role_key)
@@ -132,7 +132,7 @@ if __name__ == '__main__':
 
 
     # 対話の往復回数を指定
-    MAX_TURNS = 3
+    MAX_TURNS = config.DEFAULT_MAX_TURNS
 
     SESSION_SEED_VALUE = config.DEFAULT_SEED
     # --------------------

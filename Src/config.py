@@ -48,6 +48,9 @@ DEFAULT_USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral"
 
 DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私に理解できるように説明してください。"
 
+
+
+DEFAULT_MAX_TURNS = 3
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"
