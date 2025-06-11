@@ -13,8 +13,10 @@ def run_pds_session(ollama_client, model_name, actor_role_key, pds_user_prompts,
         print(f"エラー: ロール '{actor_role_key}' が prompts_and_roles.py の ROLES に定義されていません。")
         return None
 
-    actor_system_prompt = ROLES[actor_role_key]
 
+
+    # エージェント役アクター
+    actor_system_prompt = ROLES[actor_role_key]
     pds_actor = Actor(
         model_name=model_name,
         role_prompt=actor_system_prompt,
@@ -22,19 +24,16 @@ def run_pds_session(ollama_client, model_name, actor_role_key, pds_user_prompts,
         seed=seed
     )
 
+
     print(f"\n--- PDSセッション開始 ---")
-
     overall_turn_counter = 0 # 全体的なターンカウンターを初期化
-
     for pds_user_utterance in pds_user_prompts:
         # PDS (ユーザー役) のターン
         overall_turn_counter += 1
         print(f"\n[ターン {overall_turn_counter} - PDS (ユーザー役)]")
 
 
-        # 日本語用
-        #
-        #
+
         if config.ENHANCED_USER_UTTERANCE_KEY == "JA":
             enhanced_user_utterance = f"あなたは「{actor_role_key}」という役割です。次の発言に答えてください：{pds_user_utterance}"
         if config.ENHANCED_USER_UTTERANCE_KEY == "EN":
