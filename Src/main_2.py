@@ -108,7 +108,7 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
 def set_reminder(response, actor_role_key):
     if config.ENHANCED_USER_UTTERANCE_KEY == "JA":
         print(actor_role_key)
-        enhanced_user_utterance = f"\nあなたは「{ROLES[actor_role_key]}」という役割です。次の発言に答えてください：\n{response}"
+        enhanced_user_utterance = f"\nあなたは「{ROLES[actor_role_key]}」という役割です。次の発言に答えてください：なお応答は短めにしてください。\n{response}"
     if config.ENHANCED_USER_UTTERANCE_KEY == "EN":
         enhanced_user_utterance = f"\nYour role is '{ROLES[actor_role_key]}'. Please respond to the following statement: \n{response}"
 
