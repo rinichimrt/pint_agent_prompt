@@ -67,7 +67,13 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
 
         # --- エージェント役のターン ---
         print(f"\n[ターン {current_turn_display} - エージェント役 ({agent_actor_role_key}) が応答を生成中...]")
-        agent_response = agent_actor.ask(last_response)
+
+        messages = set_reminder(
+            response = last_response,
+            actor_role_key = agent_actor_role_key
+        )
+
+        agent_response = agent_actor.ask(messages)
         if agent_response is None: break
         print(f"応答: {agent_response}")
         last_response = agent_response
@@ -76,7 +82,13 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
 
         # --- ユーザー役のターン ---
         print(f"\n[ターン {current_turn_display} - ユーザー役 ({user_actor_role_key}) が応答を生成中...]")
-        user_response = user_actor.ask(last_response)
+
+        messages = set_reminder(
+            response=last_response,
+            actor_role_key=user_actor_role_key
+        )
+
+        user_response = user_actor.ask(messages)
         if user_response is None: break
         print(f"応答: {user_response}")
         last_response = user_response
@@ -90,6 +102,20 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
 
     # 最終的な履歴として、マージしたものを返す
     return merged_conversation_history
+
+
+
+def set_reminder(response, actor_role_key):
+    if config.ENHANCED_USER_UTTERANCE_KEY == "JA":
+        enhanced_user_utterance = f"\nあなたは「{actor_role_key}」という役割です。次の発言に答えてください：\n{response}"
+    if config.ENHANCED_USER_UTTERANCE_KEY == "EN":
+        enhanced_user_utterance = f"\nYour role is '{actor_role_key}'. Please respond to the following statement: \n{response}"
+
+
+    return enhanced_user_utterance
+
+
+
 
 
 if __name__ == '__main__':

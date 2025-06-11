@@ -49,4 +49,4 @@ class Actor:
 
 
     def print_input_prompt(self, input_prompt):
-        print(f"入力されたprompt：{input_prompt}")
+        print(f"---------- 入力されたprompt ----------：\n{input_prompt}\n---------------------------------")
