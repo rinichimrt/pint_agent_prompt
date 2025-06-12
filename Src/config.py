@@ -42,20 +42,12 @@ DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_JA"
 # --- 再現性設定 ---
 # デフォルトのシード値。Noneにすると、実行ごとに結果が変動しやすくなります。
 # 特定の数値を設定すると、同じ入力に対して（ほぼ）同じ出力が得られるようになります。
-DEFAULT_SEED = 44000
+DEFAULT_SEED = 22
 
 
 # 入力を英語にするか日本語にするか
 ENHANCED_USER_UTTERANCE_KEY= "EN"
 # ENHANCED_USER_UTTERANCE_KEY = "JA"
-
-
-
-
-
-
-
-
 
 
 
@@ -68,7 +60,7 @@ DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私
 
 
 
-DEFAULT_MAX_TURNS = 30
+DEFAULT_MAX_TURNS = 5
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"

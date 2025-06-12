@@ -15,7 +15,7 @@ class Actor:
         self.messages.append(current_user_message)
 
 
-        # self.print_input_prompt(user_prompt)
+        self.print_input_prompt(user_prompt)
 
 
 
