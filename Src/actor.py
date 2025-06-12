@@ -33,6 +33,8 @@ class Actor:
 
             llm_response_content = response['message']['content']
 
+
+
             print(f"--- Received response from Ollama ---")
 
             self.messages.append({'role': 'assistant', 'content': llm_response_content})
