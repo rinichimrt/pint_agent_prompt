@@ -32,32 +32,22 @@ DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_JA"
 # DIALOGUE_SCENARIOS_KEY = "SCENARIO_BOSS_PERSUASION_JA"
 
 #------------------------------------------------------------------------20250611現在使っていない
-
-
-
-
-
-
-
 # --- 再現性設定 ---
 # デフォルトのシード値。Noneにすると、実行ごとに結果が変動しやすくなります。
 # 特定の数値を設定すると、同じ入力に対して（ほぼ）同じ出力が得られるようになります。
 DEFAULT_SEED = 22
 
-
 # 入力を英語にするか日本語にするか
 ENHANCED_USER_UTTERANCE_KEY= "EN"
 # ENHANCED_USER_UTTERANCE_KEY = "JA"
-
-
 
 # DEFAULT_USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral"
 # DEFAULT_USER_ACTOR_ROLE_KEY = "fany_user"
 DEFAULT_USER_ACTOR_ROLE_KEY = "explane_user_to_Boss"
 
 
-DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私に理解できるように説明してください。"
-
+# DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私に理解できるように説明してください。"
+DEFAULT_INITIAL_PROMPT = "Hello. Please explain your role to me so I can understand."
 
 
 DEFAULT_MAX_TURNS = 5
