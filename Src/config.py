@@ -31,6 +31,7 @@ DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_JA"
 # DIALOGUE_SCENARIOS_KEY = "SCENARIO_PINT_AGENT_TEST_EN"
 # DIALOGUE_SCENARIOS_KEY = "SCENARIO_BOSS_PERSUASION_JA"
 
+#------------------------------------------------------------------------20250611現在使っていない
 
 
 
@@ -50,6 +51,9 @@ ENHANCED_USER_UTTERANCE_KEY = "JA"
 
 
 
+
+
+
 # DEFAULT_USER_ACTOR_ROLE_KEY = "dialogue_partner_neutral"
 # DEFAULT_USER_ACTOR_ROLE_KEY = "fany_user"
 DEFAULT_USER_ACTOR_ROLE_KEY = "explane_user_to_Boss"
@@ -59,7 +63,7 @@ DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私
 
 
 
-DEFAULT_MAX_TURNS = 10
+DEFAULT_MAX_TURNS = 30
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"
