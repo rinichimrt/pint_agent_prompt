@@ -153,6 +153,7 @@ if __name__ == '__main__':
             エージェント役='{AGENT_ACTOR_ROLE_KEY}',
             ユーザー役='{USER_ACTOR_ROLE_KEY}',
             シード={SESSION_SEED_VALUE},
+            ターン数={MAX_TURNS},
 
 
 
