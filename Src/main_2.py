@@ -83,7 +83,7 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
         if config.ENABLE_SELF_ANALYSIS:
             print("メタ")
             if "self_analysis_EN" in META_PROMPTS:
-                agent_meta_prompt = "\n\n" + META_PROMPTS["self_analysis"]
+                agent_meta_prompt = "\n\n" + META_PROMPTS["self_analysis_EN"]
                 print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
 
 
