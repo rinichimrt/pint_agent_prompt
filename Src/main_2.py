@@ -148,12 +148,16 @@ if __name__ == '__main__':
 
     print("プロジェクトPDS 実行エンジン (エージェントシミュレーションモード)")
     print(
-            f"設定情報: モデル='{TARGET_MODEL_NAME}', 
-            エージェント役='{AGENT_ACTOR_ROLE_KEY}', 
-            ユーザー役='{USER_ACTOR_ROLE_KEY}', 
+            f"""
+            設定情報: モデル='{TARGET_MODEL_NAME}',
+            エージェント役='{AGENT_ACTOR_ROLE_KEY}',
+            ユーザー役='{USER_ACTOR_ROLE_KEY}',
             シード={SESSION_SEED_VALUE},
 
-    # Ollamaクライアントを初期化
+
+
+            """    # Ollamaクライアントを初期化
+        )
     ollama_client = ollama.Client()
 
     final_conversation_history = run_pds_agent_simulation(
