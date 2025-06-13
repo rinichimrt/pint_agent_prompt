@@ -87,12 +87,12 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
                 print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
 
 
-        messages += agent_meta_prompt
 
         messages = set_reminder(
             response = last_response,
             actor_role_key = agent_actor_role_key
         )
+        messages += agent_meta_prompt
 
         agent_response = agent_actor.ask(messages)
         if agent_response is None: break
