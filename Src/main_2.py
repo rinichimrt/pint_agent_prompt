@@ -29,12 +29,12 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
         return None
     agent_system_prompt = ROLES[agent_actor_role_key]
 
-
-    if config.ENABLE_SELF_ANALYSIS:
-        print("メタ")
-        if "self_analysis" in META_PROMPTS:
-            agent_system_prompt += "\n\n" + META_PROMPTS["self_analysis"]
-            print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
+    # #
+    # if config.ENABLE_SELF_ANALYSIS:
+    #     print("メタ")
+    #     if "self_analysis" in META_PROMPTS:
+    #         agent_system_prompt += "\n\n" + META_PROMPTS["self_analysis"]
+    #         print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
 
 
 
@@ -77,6 +77,17 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
 
         # --- エージェント役のターン ---
         print(f"\n[ターン {current_turn_display} - エージェント役 ({agent_actor_role_key}) が応答を生成中...]")
+
+
+
+        if config.ENABLE_SELF_ANALYSIS:
+            print("メタ")
+            if "self_analysis_EN" in META_PROMPTS:
+                agent_meta_prompt += "\n\n" + META_PROMPTS["self_analysis"]
+                print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
+
+
+        messages += agent_meta_prompt
 
         messages = set_reminder(
             response = last_response,

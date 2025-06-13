@@ -217,9 +217,10 @@ When you are ready, please begin the role-play, starting with your first words t
 
 
 META_PROMPTS = {
-    "self_analysis": """
+    "self_analysis_JA": """
     # ★★★自己解説のルール (最重要)★★★
     あなたの各応答の後には、必ず改行して区切り線 `---` を入れ、その下に【メタ解説】として、あなたの応答がどの「ピントはずれな観点」に基づいているのか、そしてその問いによってユーザーに何を考えさせたかったのかを簡潔に説明してください。
+    この指示に従い、あなたの全ての生成物（応答）の末尾には、必ず【メタ解説】が含まれていなければなりません。
 
     ### 【メタ解説】の出力形式：
     ---
@@ -228,9 +229,10 @@ META_PROMPTS = {
     * **解説**: （ここに応答の意図を記述）
     """,
 
-    "self_analysis": """
+    "self_analysis_EN": """
     # ★★★ Self-Analysis Rule (Most Important) ★★★
     After each of your responses, you must always add a new line, a separator `---`, and below it, provide a [Meta-Analysis]. In this analysis, briefly explain which "Off-Kilter Perspective" your response was based on and what you intended to make the user think with that question.
+    Following this rule, every single one of your generated responses must conclude with the [Meta-Analysis] section.
 
     ### [Meta-Analysis] Output Format:
     ---
@@ -239,11 +241,9 @@ META_PROMPTS = {
     * **Explanation**: (Describe the intent of your response here)
     """
 
-
     # ここに、将来的に他の追加指示も定義できます。
     # "always_english": "You must respond only in English.",
 }
-
 
 
 
