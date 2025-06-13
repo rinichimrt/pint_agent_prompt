@@ -50,6 +50,12 @@ DEFAULT_USER_ACTOR_ROLE_KEY = "explane_user_to_Boss"
 DEFAULT_INITIAL_PROMPT = "Hello. Please explain your role to me so I can understand."
 
 DEFAULT_MAX_TURNS = 20
+
+
+
+# メタ解説機能を有効にするか
+ENABLE_SELF_ANALYSIS = True
+
 # --- (オプション) 対話履歴の保存設定 ---
 # 必要に応じてコメントを解除し、設定してください。
 # SAVE_HISTORY_DIR = "pds_history_logs"

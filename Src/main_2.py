@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import ollama # Ollamaクライアントライブラリ
 from actor import Actor
-from prompts_and_roles import ROLES, DIALOGUE_SCENARIOS # 修正: DIALOGUE_SCENARIOSをインポート
+from prompts_and_roles import ROLES, DIALOGUE_SCENARIOS# 修正: DIALOGUE_SCENARIOSをインポート
 import config
 import os
 from datetime import datetime
