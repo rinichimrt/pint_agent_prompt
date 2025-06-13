@@ -226,7 +226,21 @@ META_PROMPTS = {
 【メタ解説】
 * **使用した観点**: 【〇〇】
 * **解説**: （ここに応答の意図を記述）
-"""
+""",
+
+    "self_analysis": """
+    # ★★★ Self-Analysis Rule (Most Important) ★★★
+    After each of your responses, you must always add a new line, a separator `---`, and below it, provide a [Meta-Analysis]. In this analysis, briefly explain which "Off-Kilter Perspective" your response was based on and what you intended to make the user think with that question.
+
+    ### [Meta-Analysis] Output Format:
+    ---
+    [Meta-Analysis]
+    * **Perspective Used**: [e.g., Costs and Resources]
+    * **Explanation**: (Describe the intent of your response here)
+    """
+
+
+
     # ここに、将来的に他の追加指示も定義できます。
     # "always_english": "You must respond only in English.",
 }

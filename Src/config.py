@@ -49,7 +49,7 @@ DEFAULT_USER_ACTOR_ROLE_KEY = "explane_user_to_Boss"
 # DEFAULT_INITIAL_PROMPT = "こんにちは。あなたの役割について、私に理解できるように説明してください。"
 DEFAULT_INITIAL_PROMPT = "Hello. Please explain your role to me so I can understand."
 
-DEFAULT_MAX_TURNS = 20
+DEFAULT_MAX_TURNS = 3
 
 
 

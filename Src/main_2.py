@@ -30,7 +30,7 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
     agent_system_prompt = ROLES[agent_actor_role_key]
 
 
-     if config.ENABLE_SELF_ANALYSIS:
+    if config.ENABLE_SELF_ANALYSIS:
         if "self_analysis" in META_PROMPTS:
             agent_system_prompt += "\n\n" + META_PROMPTS["self_analysis"]
             print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
@@ -147,7 +147,11 @@ if __name__ == '__main__':
     # --------------------
 
     print("プロジェクトPDS 実行エンジン (エージェントシミュレーションモード)")
-    print(f"設定情報: モデル='{TARGET_MODEL_NAME}', エージェント役='{AGENT_ACTOR_ROLE_KEY}', ユーザー役='{USER_ACTOR_ROLE_KEY}', シード={SESSION_SEED_VALUE}")
+    print(
+            f"設定情報: モデル='{TARGET_MODEL_NAME}', 
+            エージェント役='{AGENT_ACTOR_ROLE_KEY}', 
+            ユーザー役='{USER_ACTOR_ROLE_KEY}', 
+            シード={SESSION_SEED_VALUE},
 
     # Ollamaクライアントを初期化
     ollama_client = ollama.Client()
