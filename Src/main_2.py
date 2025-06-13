@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import ollama # Ollamaクライアントライブラリ
 from actor import Actor
-from prompts_and_roles import ROLES, DIALOGUE_SCENARIOS# 修正: DIALOGUE_SCENARIOSをインポート
+from prompts_and_roles import ROLES, DIALOGUE_SCENARIOS, META_PROMPTS# 修正: DIALOGUE_SCENARIOSをインポート
 import config
 import os
 from datetime import datetime
@@ -28,6 +28,15 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
         print(f"エラー: エージェント役のロール '{agent_actor_role_key}' が prompts_and_roles.py に定義されていません。")
         return None
     agent_system_prompt = ROLES[agent_actor_role_key]
+
+
+     if config.ENABLE_SELF_ANALYSIS:
+        if "self_analysis" in META_PROMPTS:
+            agent_system_prompt += "\n\n" + META_PROMPTS["self_analysis"]
+            print("--- [INFO] エージェント役にメタ解説機能が追加されました。 ---")
+
+
+
     agent_actor = Actor(
         model_name=model_name,
         role_prompt=agent_system_prompt,
