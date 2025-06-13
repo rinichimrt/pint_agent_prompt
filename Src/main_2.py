@@ -35,7 +35,6 @@ def run_pds_agent_simulation(ollama_client, model_name, agent_actor_role_key, us
         seed=seed
     )
 
-
     # ユーザー役アクター
     if user_actor_role_key not in ROLES:
         print(f"エラー: ユーザー役のロール '{user_actor_role_key}' が prompts_and_roles.py に定義されていません。")

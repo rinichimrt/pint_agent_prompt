@@ -18,7 +18,6 @@ class Actor:
         self.print_input_prompt(user_prompt)
 
 
-
         options_payload = {}
         if self.seed is not None:
             options_payload['seed'] = self.seed
@@ -32,7 +31,6 @@ class Actor:
             )
 
             llm_response_content = response['message']['content']
-
 
 
             print(f"--- Received response from Ollama ---")
