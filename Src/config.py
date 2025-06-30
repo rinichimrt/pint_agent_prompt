@@ -52,7 +52,6 @@ DEFAULT_INITIAL_PROMPT = "Hello. Please explain your role to me so I can underst
 DEFAULT_MAX_TURNS = 3
 
 
-
 # メタ解説機能を有効にするか
 ENABLE_SELF_ANALYSIS = True
 
